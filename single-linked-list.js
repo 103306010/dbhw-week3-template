@@ -18,7 +18,7 @@ SinglyLinkedList.prototype.add = function(data) {
     this.tail.next=node;
     this.tail=node;
   }
-  this.numberValueOfValue++;
+  this.numberOfValues++;
 };
 
 SinglyLinkedList.prototype.remove = function(data) {
@@ -53,7 +53,7 @@ SinglyLinkedList.prototype.insertAfter = function(data, toNodeData) {
         node.next=current.next;
         current.next=node;
       }
-      this.numberOfValue++;
+      this.numberOfValues++;
     }
     current=current.next;
   }
@@ -67,7 +67,7 @@ SinglyLinkedList.prototype.print = function() {
   var string=' ';
   var current=this.head;
   while(current){
-    string+=current.data+' ';
+    string+=current.data +' ';
     current=current.next;
   }
   return string.trim();
